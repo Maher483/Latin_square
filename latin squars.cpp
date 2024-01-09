@@ -19,11 +19,11 @@ void solveLatinSquare(int square[MAX_SIZE][MAX_SIZE], int order, int row, int co
         // Print the Latin square
         for (int i = 0; i < order; ++i) {
             for (int j = 0; j < order; ++j) {
-                std::cout << square[i][j] << " ";
+                cout << square[i][j] << " ";
             }
-            std::cout << std::endl;
+            cout << std::endl;
         }
-        std::cout << std::endl;
+        cout << std::endl;
         return;
     }
 
@@ -45,7 +45,7 @@ void solveLatinSquare(int square[MAX_SIZE][MAX_SIZE], int order, int row, int co
 void generateLatinSquare(int order) {
     // Check for valid order
     if (order <= 0 || order > MAX_SIZE) {
-        std::cerr << "Invalid order\n";
+        cout << "Invalid order\n";
         return;
     }
 
@@ -60,10 +60,10 @@ void CheckLatinSquare(int** mat, int size)
 {
      
     // Array of 'size' sets corresponding to each row.
-    std::set<int>* rows = new std::set<int>[size];
+    set<int>* rows = new set<int>[size];
 
     // Array of 'size' sets corresponding to each column.
-    std::set<int>* cols = new std::set<int>[size];
+    set<int>* cols = new set<int>[size];
 
     // Number of invalid elements
     int invalid = 0;
